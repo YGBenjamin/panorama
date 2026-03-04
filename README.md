@@ -5,6 +5,8 @@ This project is the culmination of my journey into fundamental Computer Vision. 
 
 ![App Screenshot](./data/readme/readme1.png)
 
+**Try the project :** ![panorama-project](https://panorama-ygbenjamin.streamlit.app/)
+
 ## Why this project?
 
 In modern photography and mapping, creating panoramas is a basic feature of any smartphone. However, the underlying mathematics are surprisingly complex. My goal with this project was to step away from black-box functions like `cv2.findHomography` or `cv2.warpPerspective` and truly understand how to:
