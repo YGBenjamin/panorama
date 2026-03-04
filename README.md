@@ -5,7 +5,7 @@ This project is the culmination of my journey into fundamental Computer Vision. 
 
 ![App Screenshot](./data/readme/readme1.png)
 
-**Try the project :** ![panorama-project](https://panorama-ygbenjamin.streamlit.app/)
+**Try the project:** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://panorama-ygbenjamin.streamlit.app/)
 
 ## Why this project?
 
