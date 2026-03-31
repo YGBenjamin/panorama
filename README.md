@@ -27,9 +27,25 @@ This effectively filters out ambiguous points before the geometry step.
 ![Matching Points](./data/readme/readme2.png)
 
 ### 2. Projective Geometry and Homography via SVD
-To warp the right image onto the left one, we need a Homography matrix $H$. This $3 \times 3$ matrix describes the perspective transformation between two planes.
+To warp the right image onto the left one, we need a Homography matrix $H$.
 $$p_{dst} \sim H p_{src}$$
-$$\begin{bmatrix} x' \\ y' \\ w' \end{bmatrix} = \begin{bmatrix} h_{11} & h_{12} & h_{13} \\ h_{21} & h_{22} & h_{23} \\ h_{31} & h_{32} & h_{33} \end{bmatrix} \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$$
+
+$$
+\begin{bmatrix} 
+x' \\ 
+y' \\ 
+w' 
+\end{bmatrix} = \begin{bmatrix} 
+h_{11} & h_{12} & h_{13} \\ 
+h_{21} & h_{22} & h_{23} \\ 
+h_{31} & h_{32} & h_{33} 
+\end{bmatrix} \begin{bmatrix} 
+x \\ 
+y \\ 
+1 
+\end{bmatrix}
+$$
+
 To find $H$, we need at least 4 corresponding points. I implemented the Direct Linear Transform (DLT) algorithm, rearranging the coordinates into a system of equations $Ah = 0$ and solving for the eigenvector corresponding to the smallest eigenvalue using Singular Value Decomposition (SVD) via `np.linalg.svd`.
 
 ### 3. RANSAC: Finding the Truth in the Noise
